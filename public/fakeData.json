@@ -7,9 +7,9 @@
       "price": "$5,000/month",
       "status": "rent",
       "area": "3000 sq ft",
-      "location": "Downtown Business District",
+      "location": "Downtown District",
       "facilities": ["Open Floor Plan", "Conference Rooms", "Kitchenette"],
-      "image": "office_space.jpg"
+      "image": "https://binarybeasts.com/resources/img/o1.jpg"
     },
     {
       "id": 2,
@@ -21,7 +21,7 @@
       "area": "1500 sq ft",
       "location": "Main Street",
       "facilities": ["Large Display Windows", "Storage Area", "Parking Available"],
-      "image": "retail_storefront.jpg"
+      "image": "https://binarybeasts.com/resources/img/o2.jpeg"
     },
     {
       "id": 3,
@@ -33,19 +33,19 @@
       "area": "10000 sq ft",
       "location": "Industrial Park",
       "facilities": ["Loading Docks", "Office Space", "Security System"],
-      "image": "warehouse_complex.jpg"
+      "image": "https://binarybeasts.com/resources/img/o3.jpg"
     },
     {
       "id": 4,
       "estate_title": "Restaurant Space with Outdoor Patio",
       "segment_name": "Restaurant",
-      "description": "Turnkey restaurant space with fully equipped kitchen and inviting outdoor patio area. Perfect for culinary entrepreneurs and restaurateurs.",
+      "description": "Turkey restaurant space with fully equipped kitchen and inviting outdoor patio area. Perfect for culinary entrepreneurs and restaurateurs.",
       "price": "$200,000",
       "status": "sale",
       "area": "2500 sq ft",
       "location": "Historic Downtown",
       "facilities": ["Commercial Kitchen", "Outdoor Seating", "Bar Area"],
-      "image": "restaurant_space.jpg"
+      "image": "https://binarybeasts.com/resources/img/o4.webp"
     },
     {
       "id": 5,
@@ -57,7 +57,7 @@
       "area": "5000 sq ft",
       "location": "Arts District",
       "facilities": ["Stage", "Green Room", "Bar Area"],
-      "image": "entertainment_venue.jpg"
+      "image": "https://binarybeasts.com/resources/img/o5.webp"
     },
     {
       "id": 6,
@@ -69,7 +69,7 @@
       "area": "2000 sq ft",
       "location": "City Center",
       "facilities": ["Street Frontage", "Large Windows", "High Ceilings"],
-      "image": "commercial_space.jpg"
+      "image": "https://binarybeasts.com/resources/img/o6.jpeg"
     }
   ]
   

@@ -13,7 +13,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div  className="w-full mb-16">
+        <div className="w-full mb-16">
             {/* <!-- navbar start --> */}
             <nav className="top-0 z-10 mx-auto w-full max-w-[1264px] fixed">
                 <div className="justify-center items-center">
@@ -41,7 +41,7 @@ const Navbar = () => {
                         </div>
                         <div className="navbar-end gap-1 md:gap-2">
 
-                            <div className="dropdown dropdown-end mt-1">
+                            <div className="dropdown dropdown-end dropdown-hover mt-1">
                                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                                     <div className="w-11 rounded-full bg-blue p-1">
                                         <img className="rounded-full" alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
