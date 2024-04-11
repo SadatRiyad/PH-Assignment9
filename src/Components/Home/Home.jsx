@@ -1,11 +1,10 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import { useLoaderData } from "react-router-dom";
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
 import './Home.css';
 
 // import required modules
@@ -15,6 +14,7 @@ import Estate from '../Estate/Estate';
 
 
 const Home = () => {
+    const estateData = useLoaderData();
     return (
         <div>
             <Swiper
@@ -70,16 +70,9 @@ const Home = () => {
                 </SwiperSlide>
             </Swiper>
             <Banner1></Banner1>
-            <Estate></Estate>
+            <Estate estateData={estateData}></Estate>
         </div>
     );
 };
 
 export default Home;
-
-
-
-
-
-
-// <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0730000000003!2d-73.9854286845949!3d40.74881797932847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2598f5f1b1f1b%3A0x1b8b9b7f3e1b1b1d!2sEmpire%20State%20Building!5e0!3m2!1sen!2sbd!4v1631773660003!5m2!1sen!2sbd" width="100%" height="200" style={{ border: 0 }} allowfullscreen="" loading="lazy"></iframe>

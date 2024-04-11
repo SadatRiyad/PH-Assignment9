@@ -5,11 +5,12 @@
       "segment_name": "Office Building",
       "description": "Spacious and contemporary office space located in the heart of the city. Features include high ceilings, large windows, and open layout.",
       "price": "$5,000/month",
-      "status": "rent",
+      "status": "Rent",
       "area": "3000 sq ft",
       "location": "Downtown District",
       "facilities": ["Open Floor Plan", "Conference Rooms", "Kitchenette"],
-      "image": "https://binarybeasts.com/resources/img/o1.jpg"
+      "image": "https://binarybeasts.com/resources/img/o1.jpg",
+      "locOnMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49677.360661825456!2d-77.1106113980294!3d38.90488740772412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7b78e03b73d8b%3A0xadb9a66c8c4d507e!2sDowntown%2C%20Washington%2C%20DC%2C%20USA!5e0!3m2!1sen!2sbd!4v1712863767437!5m2!1sen!2sbd"
     },
     {
       "id": 2,
@@ -17,11 +18,12 @@
       "segment_name": "Retail Space",
       "description": "Ideal retail storefront with excellent visibility and foot traffic. Perfect for launching your new business or expanding your brand presence.",
       "price": "$800,000",
-      "status": "sale",
+      "status": "Sale",
       "area": "1500 sq ft",
       "location": "Main Street",
       "facilities": ["Large Display Windows", "Storage Area", "Parking Available"],
-      "image": "https://binarybeasts.com/resources/img/o2.jpeg"
+      "image": "https://binarybeasts.com/resources/img/o2.jpeg",
+      "locOnMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2885.0872496838306!2d-79.3040563534324!3d43.68794947602597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cc17f3709251%3A0x5d0acc34caa85d2c!2sMain%20St%2C%20Toronto%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sbd!4v1712863646638!5m2!1sen!2sbd"
     },
     {
       "id": 3,
@@ -29,11 +31,12 @@
       "segment_name": "Warehouse",
       "description": "Massive warehouse complex suitable for manufacturing, distribution, or storage. Features include loading docks, high ceilings, and ample parking.",
       "price": "$10,000/month",
-      "status": "rent",
+      "status": "Rent",
       "area": "10000 sq ft",
       "location": "Industrial Park",
       "facilities": ["Loading Docks", "Office Space", "Security System"],
-      "image": "https://binarybeasts.com/resources/img/o3.jpg"
+      "image": "https://binarybeasts.com/resources/img/o3.jpg",
+      "locOnMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d358549.3215385565!2d-76.19215622867965!3d45.40598045975808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce0f01d16fed21%3A0x83745a331ff86c56!2sIndustrial%20Park%2C%20Ottawa%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sbd!4v1712863492490!5m2!1sen!2sbd" 
     },
     {
       "id": 4,
@@ -41,11 +44,12 @@
       "segment_name": "Restaurant",
       "description": "Turkey restaurant space with fully equipped kitchen and inviting outdoor patio area. Perfect for culinary entrepreneurs and restaurateurs.",
       "price": "$200,000",
-      "status": "sale",
+      "status": "Sale",
       "area": "2500 sq ft",
       "location": "Historic Downtown",
       "facilities": ["Commercial Kitchen", "Outdoor Seating", "Bar Area"],
-      "image": "https://binarybeasts.com/resources/img/o4.webp"
+      "image": "https://binarybeasts.com/resources/img/o4.webp",
+      "locOnMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24189.790672293148!2d-74.088398326154!3d40.72409562206717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c250b522ce9b83%3A0xc7f1f049528a3720!2sHistoric%20Downtown%2C%20Jersey%20City%2C%20NJ%2C%20USA!5e0!3m2!1sen!2sbd!4v1712862793859!5m2!1sen!2sbd"
     },
     {
       "id": 5,
@@ -53,11 +57,12 @@
       "segment_name": "Entertainment Venue",
       "description": "Versatile entertainment venue equipped with a stage, sound system, and lighting setup. Ideal for concerts, performances, and special events.",
       "price": "$15,000/month",
-      "status": "rent",
+      "status": "Rent",
       "area": "5000 sq ft",
       "location": "Arts District",
       "facilities": ["Stage", "Green Room", "Bar Area"],
-      "image": "https://binarybeasts.com/resources/img/o5.webp"
+      "image": "https://binarybeasts.com/resources/img/o5.webp",
+      "locOnMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13224.33442248654!2d-118.25155997113197!3d34.04172642144964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c63a54b5873f%3A0xd46d538dad108ae0!2sArts%20District%2C%20Los%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1712863391173!5m2!1sen!2sbd" 
     },
     {
       "id": 6,
@@ -65,11 +70,12 @@
       "segment_name": "Commercial Space",
       "description": "High-traffic commercial space located in a bustling shopping district. Perfect for retail stores, cafes, or service-based businesses.",
       "price": "$1,500,000",
-      "status": "sale",
+      "status": "Sale",
       "area": "2000 sq ft",
       "location": "City Center",
       "facilities": ["Street Frontage", "Large Windows", "High Ceilings"],
-      "image": "https://binarybeasts.com/resources/img/o6.jpeg"
+      "image": "https://binarybeasts.com/resources/img/o6.jpeg",
+      "locOnMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.5086041846175!2d90.41270288885498!3d23.729236000000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8598806bf51%3A0x77da3f455b97eadb!2sCity%20Center!5e0!3m2!1sen!2sbd!4v1712863201663!5m2!1sen!2sbd"
     }
   ]
   

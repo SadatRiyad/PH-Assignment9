@@ -1,9 +1,9 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
-export const EstateContext = createContext();
+export const AuthContext = createContext();
 
 
-const EstateComponent = ({ children }) => {
+const AuthComponent = ({ children }) => {
     // fetch data from api here and store it in the state variable below.
     const [estateData, setEstateData] = useState([]);
     const fetchData = async () => {
@@ -17,16 +17,16 @@ const EstateComponent = ({ children }) => {
 
     return (
 
-        <EstateContext.Provider value={{ estateData }}>
+        <AuthContext.Provider value={{ estateData }}>
             {children}
-        </EstateContext.Provider>
+        </AuthContext.Provider>
     );
 };
 
-export default EstateComponent;
+export default AuthComponent;
 
 
 
-EstateComponent.propTypes = {
+AuthComponent.propTypes = {
     children: PropTypes.object.isRequired
 }

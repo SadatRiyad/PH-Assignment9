@@ -7,7 +7,8 @@ import Home from './Components/Home/Home';
 import ErrorPage from './Components/ErrorPage/ErrorPage';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
-import EstateComponent from './ContextApi/EstateComponent/EstateComponent';
+import EstateDtails from './Components/Estate/EstateDtails';
+import AuthComponent from './ContextApi/AuthContext/AuthContext';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
+        loader: ()=> fetch ('/fakeData.json'),
         element: <Home></Home>,
       },
       {
@@ -27,14 +29,19 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>,
       },
+      {
+        path: "/estateDetails/id/:Id",
+        element: <EstateDtails></EstateDtails>,
+        loader: () => fetch(`/fakeData.json`),
+      }
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <EstateComponent>
+    <AuthComponent>
       <RouterProvider router={router} />
-    </EstateComponent>
+    </AuthComponent>
   </React.StrictMode>,
 )
