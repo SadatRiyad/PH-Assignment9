@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
 import { BsArrowRight } from "react-icons/bs";
 
-const Facilities = ({facilities}) => {
-    // console.log(first, second, third)
+const Facilities = ({ facilities }) => {
     return (
-            <li className='flex gap-1'><BsArrowRight className=' mt-1' />{facilities}</li>
+        <li className='flex gap-1'><BsArrowRight className=' mt-1' />{facilities}</li>
     );
 };
 

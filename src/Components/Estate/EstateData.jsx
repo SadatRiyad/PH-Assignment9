@@ -15,7 +15,7 @@ const EstateData = ({ estateData }) => {
                 </figure>
             </div>
             <div className="card-body items-start text-left px-5 pt-0">
-                <h2 className="card-title font-extrabold mt-2">{estate_title} for {status}</h2>
+                <h2 className="card-title font-extrabold mt-2">{estate_title}</h2>
                 <h3 className='font-bold text-blue mt-0 pt-0'>{price}</h3>
                 <p className="pb-4 text-xs text-tertiary">{description}</p>
                 <hr className="mb-2 w-full" />

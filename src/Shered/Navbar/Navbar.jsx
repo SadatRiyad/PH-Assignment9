@@ -59,7 +59,6 @@ const Navbar = () => {
                                 </ul>
                             </div>
                             <NavLink to="/login" className="btn mr-4 bg-red hover:bg-transparent border-red text-white hover:text-red rounded hover:border-red  hover:-translate-y-0 transition-all duration-200">Login</NavLink>
-
                         </div>
                     </div>
                 </div>
