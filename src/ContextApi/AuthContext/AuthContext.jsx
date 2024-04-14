@@ -4,20 +4,19 @@ export const AuthContext = createContext();
 
 
 const AuthComponent = ({ children }) => {
-    // fetch data from api here and store it in the state variable below.
-    const [estateData, setEstateData] = useState([]);
-    const fetchData = async () => {
-        const response = await fetch('./fakeData.json');
-        const data = await response.json();
-        setEstateData(data);
-    }
+    const [user, setUser] = useState(null);
+    
     useEffect(() => {
-        fetchData();
     }, []);
 
     return (
 
-        <AuthContext.Provider value={{ estateData }}>
+        <AuthContext.Provider value={
+            {
+                user,
+                setUser
+            }
+        }>
             {children}
         </AuthContext.Provider>
     );
