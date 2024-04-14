@@ -8,7 +8,7 @@ import ErrorPage from './Components/ErrorPage/ErrorPage';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import EstateDtails from './Components/Estate/EstateDtails';
-import AuthComponent from './ContextApi/AuthContext/AuthContext';
+import AuthProvider from './ContextApi/AuthProvider/AuthProvider';
 
 const router = createBrowserRouter([
   {
@@ -40,8 +40,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AuthComponent>
+    <AuthProvider>
       <RouterProvider router={router} />
-    </AuthComponent>
+    </AuthProvider>
   </React.StrictMode>,
 )

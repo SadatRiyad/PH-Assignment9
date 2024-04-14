@@ -3,8 +3,11 @@ import { useForm } from "react-hook-form"
 import { FaFacebook } from "react-icons/fa6";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { BsInfoCircle } from "react-icons/bs";
+import { AuthContext } from "../../ContextApi/AuthProvider/AuthProvider";
+import { useContext } from "react";
 
 const Login = () => {
+    const { loginUser } = useContext(AuthContext);
     const {
         register,
         handleSubmit,
@@ -13,7 +16,17 @@ const Login = () => {
 
 
     const onSubmit = (data) => {
-        console.log(data);
+        // console.log(data);
+        const { email, password } = data;
+        loginUser(email, password)
+            .then((res) => {
+                const { user } = res;
+                console.log(user);
+            }
+            )
+            .catch((error) =>{
+                console.log(error);
+            })
     };
 
     return (

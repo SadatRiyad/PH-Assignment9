@@ -1,34 +1,31 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form"
 import { BsInfoCircle } from "react-icons/bs";
+import { AuthContext } from "../../ContextApi/AuthProvider/AuthProvider";
+import { useContext } from "react";
 
 const Register = () => {
+    const { registerUser, updateUserProfile, setRender } = useContext(AuthContext);
+
     const {
         register,
         handleSubmit,
-        watch,
         formState: { errors },
-    } = useForm({
-        defaultValues: {
-            name: '',
-            email: '',
-            photoURL: '',
-            password: ''
-        },
-    });
-
-    const password = watch("password");
-    // console.log(password)
-    // if (password === "") {
-    //     console.log("password is required")
-    // }
+    } = useForm();
 
     const onSubmit = (data) => {
-        console.log(data);
-        if (password.length < 6) {
-            console.log("password")
+        const { name, email, photoURL, password } = data;
 
-        }
+        registerUser(email, password)
+            .then((result) => {
+                setRender(true);
+                updateUserProfile(name, photoURL)
+                    .then(() => {
+                        if (result) {
+                            console.log(result);
+                        }
+                    })
+            })
     };
 
     return (
@@ -57,7 +54,7 @@ const Register = () => {
                                     value: true,
                                     message: "Please input your name"
                                 }
-                            })} type="name" placeholder="your full name" className="input input-bordered" />
+                            })} type="text" placeholder="your full name" className="input input-bordered" />
                             {errors?.name && <span className="text-red text-sm mt-1 items-center flex"><BsInfoCircle className="mr-1 font-bold" />{errors?.name?.message}</span>}
                         </div>
                         <div className="form-control">
@@ -88,7 +85,7 @@ const Register = () => {
                                 //     value: /^https?:/i,
                                 //     message: "Invalid image url format"
                                 // } 
-                            })} type="photoURL" placeholder="your photoURL" className="input input-bordered" />
+                            })} type="text" placeholder="your photoURL" className="input input-bordered" />
                             {errors?.photoURL && <span className="text-red text-sm mt-1 items-center flex"><BsInfoCircle className="mr-1 font-bold" />{errors?.photoURL?.message}</span>}
                         </div>
                         <div className="form-control">
