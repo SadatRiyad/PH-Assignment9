@@ -9,6 +9,8 @@ import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 import EstateDtails from './Components/Estate/EstateDtails';
 import AuthProvider from './ContextApi/AuthProvider/AuthProvider';
+import UpdateProfile from './Components/UpdateProfile/UpdateProfile';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -18,7 +20,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: ()=> fetch ('/fakeData.json'),
+        loader: () => fetch('/fakeData.json'),
         element: <Home></Home>,
       },
       {
@@ -31,8 +33,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/estateDetails/id/:Id",
-        element: <EstateDtails></EstateDtails>,
+        element: <PrivateRoute><EstateDtails></EstateDtails></PrivateRoute>,
         loader: () => fetch(`/fakeData.json`),
+      },
+      {
+        path: "/updateProfile",
+        element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
       }
     ],
   },

@@ -2,10 +2,21 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form"
 import { BsInfoCircle } from "react-icons/bs";
 import { AuthContext } from "../../ContextApi/AuthProvider/AuthProvider";
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import { toast, ToastContainer } from 'react-toastify';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 
 const Register = () => {
-    const { registerUser, updateUserProfile, setRender } = useContext(AuthContext);
+    const { registerUser, updateUserProfile, setRender, setUser, user } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const redirect = location?.state || '/';
+    const [passwordVisible, setPasswordVisible] = useState(false);
+
+    const togglePasswordVisibility = () => {
+        setPasswordVisible(!passwordVisible);
+    };
 
     const {
         register,
@@ -17,15 +28,17 @@ const Register = () => {
         const { name, email, photoURL, password } = data;
 
         registerUser(email, password)
-            .then((result) => {
-                setRender(true);
+            .then(() => {
                 updateUserProfile(name, photoURL)
                     .then(() => {
-                        if (result) {
-                            console.log(result);
-                        }
-                    })
-            })
+                        setRender(true);
+                        setUser({ ...user, displayName: name, photoURL: photoURL })
+                        toast("Registration successful, you will be redirected to the home page shortly!", { type: "success", autoClose: 2000 });
+                        setTimeout(() => {
+                            navigate(redirect);
+                        }, 3000)
+                    });
+            });
     };
 
     return (
@@ -88,7 +101,7 @@ const Register = () => {
                             })} type="text" placeholder="your photoURL" className="input input-bordered" />
                             {errors?.photoURL && <span className="text-red text-sm mt-1 items-center flex"><BsInfoCircle className="mr-1 font-bold" />{errors?.photoURL?.message}</span>}
                         </div>
-                        <div className="form-control">
+                        <div className="form-control relative">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
@@ -103,8 +116,19 @@ const Register = () => {
                                     uppercase: value => value === value.toLowerCase() ? "Password must contain at least one uppercase letter" : undefined,
                                     lowercase: value => value === value.toUpperCase() ? "Password must contain at least one lowercase letter" : undefined
                                 }
-                            })} type="password" placeholder="your password" className="input input-bordered" />
+                            })} type={passwordVisible ? 'text' : 'password'} placeholder="your password" className="input input-bordered pr-10" />
                             {errors?.password && <span className="text-red text-sm mt-1 items-center flex"><BsInfoCircle className="mr-1 font-bold" />{errors?.password?.message}</span>}
+                            <button
+                                type="button"
+                                className="absolute inset-y-0 top-9 right-0 flex items-center px-3"
+                                onClick={togglePasswordVisibility}
+                            >
+                                {passwordVisible ?
+                                    <AiOutlineEye size={20} />
+                                    :
+                                    <AiOutlineEyeInvisible size={20} />
+                                }
+                            </button>
                         </div>
                         <div className="items-center flex">
                             <input {...register("checkbox", {
@@ -125,6 +149,7 @@ const Register = () => {
                     </form>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };

@@ -20,7 +20,7 @@ const EstateDtails = () => {
     const IdInt = parseInt(Id);
     const theEstateData = estateData.find((estate) => estate.id === IdInt);
     const { area, description, estate_title, facilities, id, image, location, price, segment_name, status, locOnMap } = theEstateData;
-
+    
 
     const [tourFormData, setTourFormData] = useState({
         name: '',

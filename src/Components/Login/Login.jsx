@@ -1,31 +1,81 @@
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form"
 import { FaFacebook } from "react-icons/fa6";
-import { AiFillGoogleCircle } from "react-icons/ai";
+import { AiFillGoogleCircle, AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { BsInfoCircle } from "react-icons/bs";
 import { AuthContext } from "../../ContextApi/AuthProvider/AuthProvider";
-import { useContext } from "react";
+import { useContext, useState } from "react";
+import { toast, ToastContainer } from 'react-toastify';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Login = () => {
-    const { loginUser } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const redirect = location?.state?.from ? location.state.from : '/';
+    const [passwordVisible, setPasswordVisible] = useState(false);
+
+    const togglePasswordVisibility = () => {
+        setPasswordVisible(!passwordVisible);
+    };
+
+    const { loginUser, handleSignInWithGoogle, handleSignInWithFacebook } = useContext(AuthContext);
     const {
         register,
         handleSubmit,
         formState: { errors },
     } = useForm();
 
+    // handleSignInWithGoogle 
+    const SignInWithGoogle = () => {
+        handleSignInWithGoogle()
+            .then(() => {
+                // toast("Login Successfully!", { type: "success", autoClose: 2000 });
+                // setTimeout(() => {
+                //     navigate(redirect);
+                // }, 3000)
+            })
+            .catch(() => {
+                // toast("Invalid login credentials.", { type: "error", autoClose: 2000 })
+                // setTimeout(() => {
+                //     window.location.reload();
+                // }, 3000)
+            })
+    };
+
+    // handleSignInWithFacebook
+    const SignInWithFacebook = () => {
+        handleSignInWithFacebook()
+            .then(() => {
+                toast("Facebook Login Successfully!", { type: "success", autoClose: 2000 });
+                setTimeout(() => {
+                    navigate("/");
+                }, 3000);
+            })
+            .catch(() => {
+                toast("Invalid login credentials.", { type: "error", autoClose: 2000 })
+                setTimeout(() => {
+                    window.location.reload();
+                }, 3000)
+            })
+    }
+
 
     const onSubmit = (data) => {
         // console.log(data);
         const { email, password } = data;
         loginUser(email, password)
-            .then((res) => {
-                const { user } = res;
-                console.log(user);
-            }
-            )
-            .catch((error) =>{
-                console.log(error);
+
+            .then(() => {
+                toast("Login Successfully!", { type: "success", autoClose: 2000 });
+                setTimeout(() => {
+                    navigate(redirect);
+                }, 3000)
+            })
+            .catch(() => {
+                toast("Invalid login credentials. Please check your email and password.", { type: "error", autoClose: 2000 })
+                setTimeout(() => {
+                    window.location.reload();
+                }, 3000)
             })
     };
 
@@ -46,7 +96,7 @@ const Login = () => {
                             <h5 className="text-blue font-bold text-4xl">Login Here</h5>
                         </div>
                     </div>
-                    <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+                    <form onSubmit={handleSubmit(onSubmit)} className="card-body pb-0">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
@@ -62,7 +112,7 @@ const Login = () => {
                             })} type="email" placeholder="your email" className="input input-bordered" />
                             {errors?.email && <span className="text-red text-sm mt-1 items-center flex"><BsInfoCircle className="mr-1 font-bold" />{errors?.email?.message}</span>}
                         </div>
-                        <div className="form-control">
+                        <div className="form-control relative">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
@@ -77,8 +127,19 @@ const Login = () => {
                                     uppercase: value => value === value.toLowerCase() ? "Password must contain at least one uppercase letter" : undefined,
                                     lowercase: value => value === value.toUpperCase() ? "Password must contain at least one lowercase letter" : undefined
                                 }
-                            })} type="password" placeholder="your password" className="input input-bordered" />
+                            })} type={passwordVisible ? 'text' : 'password'} placeholder="your password" className="input input-bordered pr-10" />
                             {errors?.password && <span className="text-red text-sm mt-1 items-center flex"><BsInfoCircle className="mr-1 font-bold" />{errors?.password?.message}</span>}
+                            <button
+                                type="button"
+                                className="absolute inset-y-0 top-9 right-0 flex items-center px-3"
+                                onClick={togglePasswordVisibility}
+                            >
+                                {passwordVisible ?
+                                    <AiOutlineEye size={20} />
+                                    :
+                                    <AiOutlineEyeInvisible size={20} />
+                                }
+                            </button>
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn bg-blue hover:bg-transparent border-blue text-white hover:text-blue hover:border-blue w-full transition-all duration-200 font-bold shadow-2xl">Login</button>
@@ -87,17 +148,20 @@ const Login = () => {
                             <p className="text-xs md:text-sm">New user? <Link to="/register" className="text-blue underline font-semibold">Register here</Link></p>
                         </div>
                         <div className="divider text-tertiary font-semibold">or continue with</div>
-                        <div className="grid grid-cols-2 gap-4 mb-2">
-                            <div className="form-control mt-0">
-                                <button className="btn bg-[#1877F2] hover:bg-transparent border-[#1877F2] text-white hover:text-[#1877F2] hover:border-[#1877F2] w-full transition-all duration-200 font-bold shadow-2xl"><FaFacebook /> Facebook</button>
-                            </div>
-                            <div className="form-control mt-0">
-                                <button className="btn bg-[#EA4335] hover:bg-transparent border-[#EA4335] text-white hover:text-[#EA4335] hover:border-[#EA4335] w-full transition-all duration-200 font-bold shadow-2xl"><AiFillGoogleCircle />Google</button>
-                            </div>
-                        </div>
+
                     </form>
+                    <div className="grid grid-cols-2 gap-4 mb-2 px-8 pb-7">
+                        <div className="mt-0">
+                            <button onClick={() => SignInWithGoogle()} className="btn bg-[#EA4335] hover:bg-transparent border-[#EA4335] text-white hover:text-[#EA4335] hover:border-[#EA4335] w-full transition-all duration-200 font-bold shadow-2xl"><AiFillGoogleCircle />Google</button>
+                        </div>
+                        <div className="mt-0">
+                            <button onClick={() => SignInWithFacebook()} className="btn bg-[#1877F2] hover:bg-transparent border-[#1877F2] text-white hover:text-[#1877F2] hover:border-[#1877F2] w-full transition-all duration-200 font-bold shadow-2xl"><FaFacebook /> Facebook</button>
+                        </div>
+
+                    </div>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };

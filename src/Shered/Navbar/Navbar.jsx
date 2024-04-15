@@ -17,7 +17,6 @@ const Navbar = () => {
         <li><NavLink to="/about" className="hover:text-red hover:bg-transparent transition-colors duration-75 mr-[2px]">About</NavLink></li>
         <li><NavLink to="/contactUs" className="hover:text-red hover:bg-transparent transition-colors duration-75 mr-[2px]">Contact Us</NavLink></li>
         <li><NavLink to="/updateProfile" className="hover:text-red hover:bg-transparent transition-colors duration-75 mr-[2px]">Update Profile</NavLink></li>
-        <li><NavLink to="/userProfile" className="hover:text-red hover:bg-transparent transition-colors duration-75 mr-[2px]">User Profile</NavLink></li>
     </>
 
     return (
@@ -57,8 +56,8 @@ const Navbar = () => {
                                                     <img className="rounded-full" alt="user pic" src={user.photoURL ? user.photoURL : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"}/>
                                                 </div>
                                             </div>
-                                            <ul tabIndex={0} className="menu bg-blue text-white border-2 border-red menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52">
-                                                <li className="px-3 py-1 text-sm text-center uppercase font-semibold bg-red rounded-xl">User Information:</li>
+                                            <ul tabIndex={0} className="menu bg-blue text-white border-2 border-red menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box">
+                                                <li className="px-3 py-1 text-sm text-center font-semibold bg-red rounded-xl">User Profile</li>
                                                 <li className="px-3 mt-2 text-lg">
                                                     {user.displayName ? user.displayName : "UserName"}
                                                 </li>
