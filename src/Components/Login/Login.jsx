@@ -29,16 +29,16 @@ const Login = () => {
     const SignInWithGoogle = () => {
         handleSignInWithGoogle()
             .then(() => {
-                // toast("Login Successfully!", { type: "success", autoClose: 2000 });
-                // setTimeout(() => {
-                //     navigate(redirect);
-                // }, 3000)
+                toast("Login Successfully!", { type: "success", autoClose: 2000 });
+                setTimeout(() => {
+                    navigate(redirect);
+                }, 3000)
             })
             .catch(() => {
-                // toast("Invalid login credentials.", { type: "error", autoClose: 2000 })
-                // setTimeout(() => {
-                //     window.location.reload();
-                // }, 3000)
+                toast("Invalid login credentials.", { type: "error", autoClose: 2000 })
+                setTimeout(() => {
+                    window.location.reload();
+                }, 3000)
             })
     };
 
@@ -46,16 +46,16 @@ const Login = () => {
     const SignInWithFacebook = () => {
         handleSignInWithFacebook()
             .then(() => {
-                toast("Facebook Login Successfully!", { type: "success", autoClose: 2000 });
-                setTimeout(() => {
-                    navigate("/");
-                }, 3000);
+                // toast("Facebook Login Successfully!", { type: "success", autoClose: 2000 });
+                // setTimeout(() => {
+                //     navigate("/");
+                // }, 3000);
             })
             .catch(() => {
-                toast("Invalid login credentials.", { type: "error", autoClose: 2000 })
-                setTimeout(() => {
-                    window.location.reload();
-                }, 3000)
+                // toast("Invalid login credentials.", { type: "error", autoClose: 2000 })
+                // setTimeout(() => {
+                //     window.location.reload();
+                // }, 3000)
             })
     }
 

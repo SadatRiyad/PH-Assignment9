@@ -11,6 +11,8 @@ import EstateDtails from './Components/Estate/EstateDtails';
 import AuthProvider from './ContextApi/AuthProvider/AuthProvider';
 import UpdateProfile from './Components/UpdateProfile/UpdateProfile';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import About from './Components/About/About';
+import ContactUs from './Components/ContactUs/ContactUs';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +41,14 @@ const router = createBrowserRouter([
       {
         path: "/updateProfile",
         element: <PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
+      },
+      {
+        path: "/about",
+        element: <PrivateRoute><About></About></PrivateRoute>
+      },
+      {
+        path: "/contactUs",
+        element: <ContactUs></ContactUs>
       }
     ],
   },

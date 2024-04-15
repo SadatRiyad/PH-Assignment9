@@ -11,6 +11,7 @@ import './Home.css';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import Banner1 from '../Banner1/Banner1';
 import Estate from '../Estate/Estate';
+import FAQsection from './FAQsection/FAQsection';
 
 
 const Home = () => {
@@ -71,6 +72,7 @@ const Home = () => {
             </Swiper>
             <Banner1></Banner1>
             <Estate estateData={estateData}></Estate>
+            <FAQsection></FAQsection>
         </div>
     );
 };
