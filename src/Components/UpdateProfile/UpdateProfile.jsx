@@ -3,6 +3,7 @@ import { BsInfoCircle } from "react-icons/bs";
 import { AuthContext } from "../../ContextApi/AuthProvider/AuthProvider";
 import { useContext } from "react";
 import { toast, ToastContainer } from 'react-toastify';
+import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
     const { updateUserProfile, setRender, setUser, auth, user, loading } = useContext(AuthContext);
@@ -42,6 +43,9 @@ const UpdateProfile = () => {
 
     return (
         <div className="hero card-body px-0 md:px-12 min-h-screen bg-red">
+            <Helmet>
+                <title>Update Profile | BB-RealEstate</title>
+            </Helmet>
             <div className="hero-content flex-col lg:flex-row">
                 <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="flex justify-center w-full mt-8">

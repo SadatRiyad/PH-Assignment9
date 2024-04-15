@@ -1,7 +1,7 @@
 
 const FAQsection = () => {
     return (
-        <div className="pt-12 pb-8 bg-slate-100">
+        <div className="pt-12 pb-8 bg-slate-100 px-2">
             <div>
             <h2 className="text-5xl text-center font-bold mb-4">FAQ&apos;s</h2>
             <p className="w-3/4 mx-auto text-center text-sm md:text-base text-tertiary mb-8">Have a question? Check out our frequently asked questions to find the answers you need. If you don&apos;t see your question listed, feel free to contact us for more information.</p>

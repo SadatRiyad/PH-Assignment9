@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useRouteError } from "react-router-dom";
 
 const ErrorPage = () => {
@@ -6,6 +7,9 @@ const ErrorPage = () => {
     return (
         // <!-- error page start -->
         <div className="flex justify-center items-center text-center h-screen">
+            <Helmet>
+                <title>Error Page | Page Not Found</title>
+            </Helmet>
             <div id="error-page">
                 <span className="text-6xl font-bold">{error.status}</span>
                 <h1 className="mb-2 mt-4 text-xl font-bold">Oops! Page not found.</h1>

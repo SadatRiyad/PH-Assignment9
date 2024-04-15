@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import "./Navbar.css";
 import { AuthContext } from "../../ContextApi/AuthProvider/AuthProvider";
@@ -22,7 +22,7 @@ const Navbar = () => {
     return (
         <div className="w-full mb-16">
             {/* <!-- navbar start --> */}
-            <nav className="top-0 z-10 mx-auto w-full max-w-[1264px] fixed">
+            <nav className="top-0 z-10 mx-auto w-full max-w-[1264px] fixed shadow-sm">
                 <div className="justify-center items-center">
                     <div className="navbar p-0 py-1 bg-base-100">
                         <div className="navbar-start">
@@ -53,17 +53,25 @@ const Navbar = () => {
                                         <div className="dropdown dropdown-end dropdown-hover mt-1">
                                             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                                                 <div className="w-11 rounded-full bg-blue p-1">
-                                                    <img className="rounded-full" alt="user pic" src={user.photoURL ? user.photoURL : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"}/>
+                                                    <img className="rounded-full" alt="user pic" src={user.photoURL ? user.photoURL : "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"} />
                                                 </div>
                                             </div>
                                             <ul tabIndex={0} className="menu bg-blue text-white border-2 border-red menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box">
-                                                <li className="px-3 py-1 text-sm text-center font-semibold bg-red rounded-xl">User Profile</li>
-                                                <li className="px-3 mt-2 text-lg">
+                                                <div className="text-sm flex items-center justify-center">
+                                                    <li className="w-full px-2 py-2 text-sm text-center font-semibold bg-red rounded-t-lg">User Profile</li>
+
+                                                </div>
+                                                <li className="px-2 mt-4 text-lg">
                                                     {user.displayName ? user.displayName : "UserName"}
                                                 </li>
-                                                <li className="px-3 mb-2 mt-1 text-sm">
-                                                    {user.email? user.email : "UserEmail"}
+                                                <li className="px-2 mb-2 mt-1 text-sm">
+                                                    {user.email ? user.email : "UserEmail"}
                                                 </li>
+                                                <li className="px-2 mb-2 mt-1 text-sm">
+                                                    <Link to="/updateProfile" className="font-medium mb-2 mt-4 bg-red hover:bg-white shadow-xl text-white border border-red focus:text-red hover:text-red hover:bg-transparent transition-colors duration-75">Update Profile</Link>
+                                                    <Link to="/login" onClick={() => handleLogout()} className="font-medium hover:bg-white shadow-xl bg-red text-white border border-red focus:text-red hover:text-red hover:bg-transparent transition-colors duration-75">Logout</Link>
+                                                </li>
+
                                             </ul>
                                         </div>
                                         <NavLink to="/login" onClick={() => handleLogout()} className="btn mr-4 bg-red hover:bg-transparent border-red text-white hover:text-red rounded hover:border-red  hover:-translate-y-0 transition-all duration-200">Logout</NavLink>

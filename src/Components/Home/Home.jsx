@@ -12,12 +12,17 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import Banner1 from '../Banner1/Banner1';
 import Estate from '../Estate/Estate';
 import FAQsection from './FAQsection/FAQsection';
+import Banner2 from '../Banner2/Banner2';
+import { Helmet } from 'react-helmet-async';
 
 
 const Home = () => {
     const estateData = useLoaderData();
     return (
         <div>
+            <Helmet>
+                <title>Home | BB-RealEstate</title>
+            </Helmet>
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
@@ -72,6 +77,7 @@ const Home = () => {
             </Swiper>
             <Banner1></Banner1>
             <Estate estateData={estateData}></Estate>
+            <Banner2></Banner2>
             <FAQsection></FAQsection>
         </div>
     );

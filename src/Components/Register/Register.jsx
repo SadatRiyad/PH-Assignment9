@@ -6,6 +6,7 @@ import { useContext, useState } from "react";
 import { toast, ToastContainer } from 'react-toastify';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
     const { registerUser, updateUserProfile, setRender, setUser, user } = useContext(AuthContext);
@@ -43,6 +44,9 @@ const Register = () => {
 
     return (
         <div className="hero card-body px-0 md:px-12 min-h-screen bg-red">
+            <Helmet>
+                <title>Register | BB-RealEstate</title>
+            </Helmet>
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left text-white lg:ml-8">
                     <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">Welcome to BB-RealEstate Registration!</h1>

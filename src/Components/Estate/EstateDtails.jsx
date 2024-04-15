@@ -12,6 +12,7 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import './Estate.css';
 import EstateData from "./EstateData";
+import { Helmet } from "react-helmet-async";
 
 
 const EstateDtails = () => {
@@ -20,7 +21,7 @@ const EstateDtails = () => {
     const IdInt = parseInt(Id);
     const theEstateData = estateData.find((estate) => estate.id === IdInt);
     const { area, description, estate_title, facilities, id, image, location, price, segment_name, status, locOnMap } = theEstateData;
-    
+
 
     const [tourFormData, setTourFormData] = useState({
         name: '',
@@ -58,6 +59,9 @@ const EstateDtails = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Estate Details: {Id} | BB-RealEstate</title>
+            </Helmet>
             <div className="card-body px-1 md:px-4 lg:card-side bg-base-200 rounded-2xl my-2 md:my-8">
                 <div className="card-body bg-blue rounded-2xl lg:w-2/4 p-8 lg:p-6 justify-around">
                     <div>

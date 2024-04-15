@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { BsPhone } from 'react-icons/bs';
 import { FaRegAddressCard } from 'react-icons/fa6';
 import { FiMail } from 'react-icons/fi';
@@ -40,6 +41,9 @@ const ContactUs = () => {
 
     return (
         <div className="container mx-auto px-4 pt-8 pb-6">
+            <Helmet>
+                <title>Contact Us | BB-RealEstate</title>
+            </Helmet>
             <div className="py-8 bg-red rounded-xl mb-1 text-white">
                 <h2 className="text-5xl text-center font-bold">Contact Us</h2>
             </div>

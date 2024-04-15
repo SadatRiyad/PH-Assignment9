@@ -1,8 +1,12 @@
+import { Helmet } from 'react-helmet-async';
 import aboutPic from '../../assets/about.jpg';
 
 const About = () => {
     return (
         <div className="container mx-auto px-4 pt-6 pb-4 bg-red text-white">
+            <Helmet>
+                <title>About | BB-RealEstate</title>
+            </Helmet>
             <div className='w-full p-4 h-fit'>
                 <div className='w-full h-fit rounded-lg'>
                     <img className='w-full rounded-lg' src={aboutPic} alt="" />
