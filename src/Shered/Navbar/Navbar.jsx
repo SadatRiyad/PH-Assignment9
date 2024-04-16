@@ -22,7 +22,7 @@ const Navbar = () => {
     return (
         <div className="w-full mb-16">
             {/* <!-- navbar start --> */}
-            <nav className="top-0 z-10 mx-auto w-full max-w-[1264px] fixed shadow-sm">
+            <nav data-aos="fade-down" data-aos-duration="500" data-aos-anchor-placement="top-bottom" data-aos-delay="50" className="top-0 z-10 mx-auto w-full max-w-[1264px] fixed shadow-sm">
                 <div className="justify-center items-center">
                     <div className="navbar p-0 py-1 bg-base-100">
                         <div className="navbar-start">

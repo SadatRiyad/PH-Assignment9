@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 const Banner2 = () => {
     return (
-        <div className="card mb-20 mt-8 lg:card-side text-white shadow-xl bg-red p-4">
-            <div className="w-full h-full flex lg:w-2/4 items-center justify-center">
+        <div data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="top-center" data-aos-delay="0"  className="card mb-20 mt-8 lg:card-side text-white shadow-xl bg-red p-4">
+            <div data-aos="fade-up" data-aos-duration="500" data-aos-anchor-placement="top-bottom" data-aos-delay="1000"  className="w-full h-full flex lg:w-2/4 items-center justify-center">
                 <div>
                     <figure><img className="rounded-lg" src="https://detroitwpresidence.b-cdn.net/wp-content/uploads/2022/08/team2.jpg" alt="Album" /></figure>
                 </div>
             </div>
-            <div className="card-body w-full lg:w-2/4 justify-center pl-1 lg:pl-8">
+            <div data-aos="fade-down" data-aos-duration="500" data-aos-anchor-placement="top-bottom" data-aos-delay="1000" className="card-body w-full lg:w-2/4 justify-center pl-1 lg:pl-8">
                 <p className="card-title font-normal text-xs text-slate-100 uppercase">BB-RealEstate Agency</p>
                 <h2 className="card-title font-bold text-2xl md:text-4xl lg:text-5xl">PROFESSIONAL <br />
                     REAL ESTATE AGENTS</h2>

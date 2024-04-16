@@ -40,7 +40,7 @@ const ContactUs = () => {
     };
 
     return (
-        <div className="container mx-auto px-4 pt-8 pb-6">
+        <div data-aos="zoom-in" data-aos-duration="700" data-aos-anchor-placement="top-bottom" data-aos-delay="50" className="container mx-auto px-4 pt-8 pb-6">
             <Helmet>
                 <title>Contact Us | BB-RealEstate</title>
             </Helmet>
@@ -54,7 +54,7 @@ const ContactUs = () => {
                 </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center mb-4 px-8 py-16 bg-red rounded-xl">
-                <div className='text-white'>
+                <div data-aos="fade-right" data-aos-duration="500" data-aos-anchor-placement="top-bottom" data-aos-delay="700"  className='text-white'>
                     <h2 className="text-3xl font-semibold mb-8">Contact Information</h2>
                     <ul className="space-y-2">
                         <li className="flex items-center space-x-4">
@@ -71,7 +71,7 @@ const ContactUs = () => {
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div data-aos="fade-left" data-aos-duration="500" data-aos-anchor-placement="top-bottom" data-aos-delay="700" >
                     <h2 className="text-3xl font-semibold mb-4 mt-8 text-white">Send us a Message</h2>
                     <form onSubmit={handleSubmit}>
                         <div className="mb-4">

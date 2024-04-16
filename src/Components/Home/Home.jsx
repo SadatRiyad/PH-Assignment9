@@ -39,10 +39,10 @@ const Home = () => {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <div className="hero a1 min-h-screen">
+                    <div data-aos="zoom-in" data-aos-duration="1000" className="hero a1 min-h-screen">
                         <div className="hero-overlay bg-opacity-60"></div>
                         <div className="hero-content text-center text-neutral-content">
-                            <div className="px-8">
+                            <div className="px-8" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" >
                                 <h1 className="mb-6 text-2xl lg:text-5xl md:text-5xl font-bold">Experience the Future <br /> of Commercial Real Estate</h1>
                                 <p className="mb-5 px-6 lg:px-24 text-sm lg:text-base md:text-base">Step into the future with BB-RealEstate. <br /> Our innovative approach to commercial real estate combines cutting-edge technology, industry expertise, and personalized service to redefine the way you do business.</p>
                                 <a href='#banner' className="btn bg-red hover:bg-red border-red text-white hover:text-white rounded hover:border-red  hover:-translate-y-1 transition-all duration-200 font-bold mt-6">Get Started</a>

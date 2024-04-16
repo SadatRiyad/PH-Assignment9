@@ -48,14 +48,14 @@ const Register = () => {
                 <title>Register | BB-RealEstate</title>
             </Helmet>
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className="text-center lg:text-left text-white lg:ml-8">
+                <div data-aos="fade-left" data-aos-duration="700" data-aos-anchor-placement="top-bottom" data-aos-delay="50"  className="text-center lg:text-left text-white lg:ml-8">
                     <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">Welcome to BB-RealEstate Registration!</h1>
                     <p className="py-6 text-base md:text-md">
                         Create an account to unlock exclusive features and access premium content. <br /> Once registered, you will be able to browse our listings, schedule property tours, and more.
                         If you have any questions or need assistance, feel free to contact our support team.
                     </p>
                 </div>
-                <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div data-aos="fade-right" data-aos-duration="700" data-aos-anchor-placement="top-bottom" data-aos-delay="50" className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="flex justify-center w-full mt-8">
                         <div>
                             <h5 className="text-blue font-bold text-4xl">Register Here</h5>

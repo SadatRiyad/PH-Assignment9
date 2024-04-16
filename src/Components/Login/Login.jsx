@@ -86,7 +86,7 @@ const Login = () => {
                 <title>Login | BB-RealEstate</title>
             </Helmet>
             <div className="hero-content flex-col lg:flex-row">
-                <div className="text-center lg:text-left text-white lg:ml-8">
+                <div data-aos="fade-right" data-aos-duration="700" data-aos-anchor-placement="top-bottom" data-aos-delay="50" className="text-center lg:text-left text-white lg:ml-8">
                     <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">Welcome to BB-RealEstate Login!</h1>
                     <p className="py-6 md:text-md text-xs md:text-sm lg:text-base md:px-24 lg:px-0">
                         Please login to access your account. <br />
@@ -94,7 +94,7 @@ const Login = () => {
 
                     </p>
                 </div>
-                <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div data-aos="fade-left" data-aos-duration="700" data-aos-anchor-placement="top-bottom" data-aos-delay="50" className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="flex justify-center w-full mt-8">
                         <div>
                             <h5 className="text-blue font-bold text-4xl">Login Here</h5>

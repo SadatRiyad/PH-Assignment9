@@ -14,7 +14,10 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import About from './Components/About/About';
 import ContactUs from './Components/ContactUs/ContactUs';
 import { HelmetProvider } from 'react-helmet-async';
-
+// aos
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const router = createBrowserRouter([
   {

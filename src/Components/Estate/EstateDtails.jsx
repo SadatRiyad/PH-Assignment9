@@ -63,17 +63,17 @@ const EstateDtails = () => {
                 <title>Estate Details: {Id} | BB-RealEstate</title>
             </Helmet>
             <div className="card-body px-1 md:px-4 lg:card-side bg-base-200 rounded-2xl my-2 md:my-8">
-                <div className="card-body bg-blue rounded-2xl lg:w-2/4 p-8 lg:p-6 justify-around">
-                    <div>
+                <div data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="top-center" data-aos-delay="50"  className="card-body bg-blue rounded-2xl lg:w-2/4 p-8 lg:p-6 justify-around">
+                    <div data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="top-center" data-aos-delay="500" >
                         <img src={image} alt="estate" className="rounded-xl w-full transition-transform duration-300 transform" />
                     </div>
-                    <div className="pt-8 lg:mt-1" id="loc">
+                    <div data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="top-center" data-aos-delay="100"  className="pt-8 lg:mt-1" id="loc">
                         <h5 className="text-white font-semibold">View <a href="#loc" className="font-bold text-red">{location}</a> location on map:</h5>
                         <iframe className="card mt-4 rounded-2xl border border-black" src={locOnMap} width="100%" height="250" style={{ border: 0 }} allowFullScreen="" loading="lazy"></iframe>
                     </div>
                 </div>
-                <div className="card-body mt-6 lg:mt-0 lg:ml-5 px-4 lg:px-8 lg:w-3/4">
-                    <div className="flex items-center gap-4 my-2">
+                <div data-aos="zoom-in" data-aos-duration="1100" data-aos-anchor-placement="top-center" data-aos-delay="50"  className="card-body mt-6 lg:mt-0 lg:ml-5 px-4 lg:px-8 lg:w-3/4">
+                    <div data-aos="zoom-in" data-aos-duration="1300" data-aos-anchor-placement="center-center" data-aos-delay="100"  className="flex items-center gap-4 my-2">
                         <div className='bg-red px-6 py-1 rounded-2xl top-2 right-2 w-fit'>
                             <h5 className='text-white font-bold shadow-lg'>{status}</h5>
                         </div>
@@ -96,14 +96,14 @@ const EstateDtails = () => {
                     <p className="text-blue font-semibold text-xs md:text-base lg:text-lg mt-1"><span className="text-tertiary font-bold">Location : </span> {location}</p>
                     <p className="text-blue font-semibold text-xs md:text-base lg:text-lg mt-1"><span className="text-tertiary font-bold">Price : </span> {price}</p>
                     <hr className="mt-1 lg:my-4 border-t-2" />
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3 md:mt-1">
+                    <div data-aos="zoom-in" data-aos-duration="400" data-aos-anchor-placement="top-bottom" data-aos-delay="200"  className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3 md:mt-1">
                         <a href="#tour" className="btn w-full mr-4 bg-red hover:bg-transparent border-red text-white hover:text-red rounded hover:border-red  hover:-translate-y-0 transition-all duration-200">Schedule a Tour</a>
                         <a href="#moreEstate" className="btn w-full mr-4 bg-blue hover:bg-transparent border-blue text-white hover:text-blue rounded hover:border-blue  hover:-translate-y-0 transition-all duration-200">Explore Similar Estates</a>
                     </div>
                 </div>
             </div>
             {/* Schedule a Tour Section */}
-            <div id="tour" className="p-5 pt-12 md:pt-4  bg-red mb-10 rounded-xl mx-4">
+            <div data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="top-center" data-aos-delay="0"  id="tour" className="p-5 pt-12 md:pt-4  bg-red mb-10 rounded-xl mx-4">
                 <h3 className="px-0 text-3xl text-white text-center font-bold shadow-lg mb-8 py-4">Schedule a Tour</h3>
                 <form onSubmit={handleFormSubmit}>
                     {/* Tour Type */}
@@ -153,7 +153,7 @@ const EstateDtails = () => {
                     <button type="submit" className="btn bg-blue hover:bg-white border-blue text-white hover:text-blue rounded hover:border-white w-full mb-6 transition-all hover:translate-y-1 duration-200 font-bold mt-5 shadow-2xl">Schedule Tour</button>
                 </form>
             </div>
-            <div className="pt-16 pb-4 mb-12 mx-4 bg-blue rounded-2xl" id="moreEstate">
+            <div data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="top-center" data-aos-delay="0"  className="pt-16 pb-4 mb-12 mx-4 bg-blue rounded-2xl" id="moreEstate">
                 <h2 className="text-3xl md:text-5xl text-center font-bold mb-4 text-white">Explore Similar Estates</h2>
                 <p className="text-xs md:text-sm text-center px-4 md:px-20 mb-8 text-tertiary">Explore estates tailored to your preferences and requirements. Find properties that align perfectly with your needs. From commercial spaces to residential gems, discover your ideal estate effortlessly.</p>
                 <div className="text-start">

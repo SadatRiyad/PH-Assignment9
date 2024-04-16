@@ -3,9 +3,9 @@ const Banner1 = () => {
     return (
         <div className="md:px-4 bg-blue rounded-b-lg py-16 md:py-20" id='banner'>
             <div className="container mx-auto">
-                <h1 className="text-3xl md:text-4xl font-bold text-white text-center px-4 mb-12">Find Your Perfect Space from our all premium commercial properties and segments.</h1>
+                <h1 data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="center-center" data-aos-delay="0" className="text-3xl md:text-4xl font-bold text-white text-center px-4 mb-12">Find Your Perfect Space from our all premium commercial properties and segments.</h1>
                 <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 px-2">
-                    <div className="card bg-white shadow-xl rounded-lg overflow-hidden">
+                    <div data-aos="fade-right" data-aos-anchor-placement="top-center" data-aos-delay="400" className="card bg-white shadow-xl rounded-lg overflow-hidden">
                         <div className="flex grow items-center px-6 py-3 bg-red">
                             <h1 className="mx-3 text-white font-semibold text-lg">Office Building</h1>
                         </div>
@@ -15,7 +15,7 @@ const Banner1 = () => {
                             <a href="#estate" className="btn bg-red hover:bg-red border-red text-white hover:text-white rounded hover:border-red  hover:-translate-y-1 transition-all duration-200 font-bold mt-4">View Estates</a>
                         </div>
                     </div>
-                    <div className="card grow bg-white shadow-xl rounded-lg overflow-hidden">
+                    <div data-aos="fade-right" data-aos-anchor-placement="top-center" data-aos-delay="300" className="card grow bg-white shadow-xl rounded-lg overflow-hidden">
                         <div className="flex items-center px-6 py-3 bg-red">
                             <h1 className="mx-3 text-white font-semibold text-lg">Retail Space</h1>
                         </div>
@@ -25,7 +25,7 @@ const Banner1 = () => {
                             <a href="#estate" className="btn bg-red hover:bg-red border-red text-white hover:text-white rounded hover:border-red  hover:-translate-y-1 transition-all duration-200 font-bold mt-4">View Estates</a>
                         </div>
                     </div>
-                    <div className="card grow bg-white shadow-xl rounded-lg overflow-hidden">
+                    <div data-aos="fade-right" data-aos-anchor-placement="top-center" data-aos-delay="200" className="card grow bg-white shadow-xl rounded-lg overflow-hidden">
                         <div className="flex items-center px-6 py-3 bg-red">
                             <h1 className="mx-3 text-white font-semibold text-lg">Commercial</h1>
                         </div>
@@ -35,7 +35,7 @@ const Banner1 = () => {
                             <a href="#estate" className="btn bg-red hover:bg-red border-red text-white hover:text-white rounded hover:border-red  hover:-translate-y-1 transition-all duration-200 font-bold mt-4">View Estates</a>
                         </div>
                     </div>
-                    <div className="card grow bg-white shadow-xl rounded-lg overflow-hidden">
+                    <div data-aos="fade-right" data-aos-anchor-placement="top-center" data-aos-delay="100" className="card grow bg-white shadow-xl rounded-lg overflow-hidden">
                         <div className="flex items-center px-6 py-3 bg-red">
                             <h1 className="mx-3 text-white font-semibold text-lg">Warehouse</h1>
                         </div>
@@ -45,7 +45,7 @@ const Banner1 = () => {
                             <a href="#estate" className="btn bg-red hover:bg-red border-red text-white hover:text-white rounded hover:border-red  hover:-translate-y-1 transition-all duration-200 font-bold mt-4">View Estates</a>
                         </div>
                     </div>
-                    <div className="card grow bg-white shadow-xl rounded-lg overflow-hidden">
+                    <div data-aos="fade-right" data-aos-anchor-placement="top-center" data-aos-delay="0" className="card grow bg-white shadow-xl rounded-lg overflow-hidden">
                         <div className="flex items-center px-6 py-3 bg-red">
                             <h1 className="mx-3 text-white font-semibold text-lg">Restaurant</h1>
                         </div>

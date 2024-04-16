@@ -5,10 +5,10 @@ import { FaLocationDot } from "react-icons/fa6";
 const EstateData = ({ estateData }) => {
     const { area, description, estate_title, id, image, location, price, status } = estateData;
     return (
-        <div className="card bg-base-100 shadow-md border-[.5px] transition-transform duration-300 transform hover:shadow-2xl">
+        <div data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="0"  className="card bg-base-100 shadow-md border-[.5px] transition-transform duration-300 transform hover:shadow-2xl">
             <div>
                 <figure className="p-4 w-full rounded-xl">
-                    <img src={image} alt="estase" className="relative rounded-xl w-full transition-transform duration-300 transform" />
+                    <img src={image} alt="estate img" className="relative rounded-xl w-full transition-transform duration-300 transform" />
                     <div className='absolute bg-red px-4 py-1 rounded-2xl top-6 right-6'>
                         <h5 className='text-white font-bold shadow-lg'>{status}</h5>
                     </div>
@@ -28,7 +28,7 @@ const EstateData = ({ estateData }) => {
                         </div>
                         <p className="flex items-center text-xs font-semibold text-red"><FaLocationDot className='mr-1' />{location}</p>
                     </div>
-                    <div>
+                    <div data-aos="fade-up" data-aos-duration="700" data-aos-anchor-placement="top-bottom" data-aos-delay="50" >
                         <Link to={`/estateDetails/id/${id}`} className="btn bg-red hover:bg-transparent border-red text-white hover:text-red rounded hover:border-red transition-all duration-200 font-bold mt-0">View Property</Link>
                     </div>
                 </div>

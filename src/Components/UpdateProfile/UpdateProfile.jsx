@@ -47,7 +47,7 @@ const UpdateProfile = () => {
                 <title>Update Profile | BB-RealEstate</title>
             </Helmet>
             <div className="hero-content flex-col lg:flex-row">
-                <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div data-aos="fade-right" data-aos-duration="700" data-aos-anchor-placement="top-bottom" data-aos-delay="50" className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="flex justify-center w-full mt-8">
                         <div>
                             <h5 className="text-blue font-bold text-4xl">User Profile</h5>
@@ -85,7 +85,7 @@ const UpdateProfile = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div data-aos="fade-left" data-aos-duration="700" data-aos-anchor-placement="top-bottom" data-aos-delay="50" className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="flex justify-center w-full mt-8">
                         <div>
                             <h5 className="text-blue font-bold text-4xl">Update Profile</h5>
