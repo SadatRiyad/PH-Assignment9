@@ -67,7 +67,7 @@ const EstateDtails = () => {
                     <div data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="top-center" data-aos-delay="500" >
                         <img src={image} alt="estate" className="rounded-xl w-full transition-transform duration-300 transform" />
                     </div>
-                    <div data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="top-center" data-aos-delay="100"  className="pt-8 lg:mt-1" id="loc">
+                    <div data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" data-aos-delay="100"  className="pt-8 lg:mt-1" id="loc">
                         <h5 className="text-white font-semibold">View <a href="#loc" className="font-bold text-red">{location}</a> location on map:</h5>
                         <iframe className="card mt-4 rounded-2xl border border-black" src={locOnMap} width="100%" height="250" style={{ border: 0 }} allowFullScreen="" loading="lazy"></iframe>
                     </div>
@@ -153,7 +153,7 @@ const EstateDtails = () => {
                     <button type="submit" className="btn bg-blue hover:bg-white border-blue text-white hover:text-blue rounded hover:border-white w-full mb-6 transition-all hover:translate-y-1 duration-200 font-bold mt-5 shadow-2xl">Schedule Tour</button>
                 </form>
             </div>
-            <div data-aos="zoom-in" data-aos-duration="1000" data-aos-anchor-placement="top-center" data-aos-delay="0"  className="pt-16 pb-4 mb-12 mx-4 bg-blue rounded-2xl" id="moreEstate">
+            <div data-aos="zoom-in" data-aos-duration="1500" data-aos-anchor-placement="top-center" data-aos-delay="250"  className="pt-16 pb-4 mb-12 mx-4 bg-blue rounded-2xl" id="moreEstate">
                 <h2 className="text-3xl md:text-5xl text-center font-bold mb-4 text-white">Explore Similar Estates</h2>
                 <p className="text-xs md:text-sm text-center px-4 md:px-20 mb-8 text-tertiary">Explore estates tailored to your preferences and requirements. Find properties that align perfectly with your needs. From commercial spaces to residential gems, discover your ideal estate effortlessly.</p>
                 <div className="text-start">

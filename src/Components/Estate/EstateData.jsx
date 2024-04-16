@@ -28,7 +28,7 @@ const EstateData = ({ estateData }) => {
                         </div>
                         <p className="flex items-center text-xs font-semibold text-red"><FaLocationDot className='mr-1' />{location}</p>
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="700" data-aos-anchor-placement="top-bottom" data-aos-delay="50" >
+                    <div data-aos="fade-left" data-aos-duration="600" data-aos-anchor-placement="top-bottom" data-aos-delay="50" >
                         <Link to={`/estateDetails/id/${id}`} className="btn bg-red hover:bg-transparent border-red text-white hover:text-red rounded hover:border-red transition-all duration-200 font-bold mt-0">View Property</Link>
                     </div>
                 </div>

@@ -39,7 +39,7 @@ const Navbar = () => {
                                     {Links}
                                 </ul>
                             </div>
-                            <a className="-ml-4 md:ml-0 w-48" href="/"><img src={logo}></img></a>
+                            <a className="-ml-4 md:ml-0 w-2/4" href="/"><img src={logo}></img></a>
                         </div>
                         <div className="navbar-center hidden lg:flex">
                             <ul className="menu menu-horizontal md:mr-4 text-base font-medium">

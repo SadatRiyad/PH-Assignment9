@@ -23,6 +23,7 @@ const Register = () => {
         register,
         handleSubmit,
         formState: { errors },
+        reset
     } = useForm();
 
     const onSubmit = (data) => {
@@ -39,6 +40,9 @@ const Register = () => {
                             navigate(redirect);
                         }, 3000)
                     });
+            }).catch(() => {
+                toast.error('Email already in use, please try another email', { autoClose: 2000 });
+                reset();
             });
     };
 
@@ -48,7 +52,7 @@ const Register = () => {
                 <title>Register | BB-RealEstate</title>
             </Helmet>
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <div data-aos="fade-left" data-aos-duration="700" data-aos-anchor-placement="top-bottom" data-aos-delay="50"  className="text-center lg:text-left text-white lg:ml-8">
+                <div data-aos="fade-left" data-aos-duration="700" data-aos-anchor-placement="top-bottom" data-aos-delay="50" className="text-center lg:text-left text-white lg:ml-8">
                     <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold">Welcome to BB-RealEstate Registration!</h1>
                     <p className="py-6 text-base md:text-md">
                         Create an account to unlock exclusive features and access premium content. <br /> Once registered, you will be able to browse our listings, schedule property tours, and more.
@@ -124,7 +128,7 @@ const Register = () => {
                             {errors?.password && <span className="text-red text-sm mt-1 items-center flex"><BsInfoCircle className="mr-1 font-bold" />{errors?.password?.message}</span>}
                             <button
                                 type="button"
-                                className="absolute inset-y-0 top-9 right-0 flex items-center px-3"
+                                className="absolute inset-y-0 top-8 right-0 flex items-center px-3"
                                 onClick={togglePasswordVisibility}
                             >
                                 {passwordVisible ?

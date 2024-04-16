@@ -49,11 +49,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/about",
-        element: <PrivateRoute><About></About></PrivateRoute>
+        element: <About></About>
       },
       {
         path: "/contactUs",
-        element: <ContactUs></ContactUs>
+        element: <PrivateRoute><ContactUs></ContactUs></PrivateRoute>
       }
     ],
   },
