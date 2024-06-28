@@ -30,8 +30,6 @@ To run this project locally, follow these steps:
 3. Install dependencies: `npm install`
 4. Start the development server: `npm run dev`
 
-## Github Code Link: 
-- https://github.com/programming-hero-web-course-4/b9a9-real-estate-SadatRiyad
 ## Live Demo
 - [Surge](https://PH-Assignment9-SadatRiyad.surge.sh) : https://PH-Assignment9-SadatRiyad.surge.sh
 - [Netlify](https://ph-assignment9-sadatriyad.netlify.app) : https://ph-assignment9-sadatriyad.netlify.app
